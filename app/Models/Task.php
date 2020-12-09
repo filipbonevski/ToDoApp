@@ -20,4 +20,9 @@ class Task extends Model
     {
     	$this->user()->associate($user);
     }
+
+    public function isCompleted(): bool
+    {
+        return (bool)$this->getAttribute('iscompleted');
+    }
 }
